@@ -10,9 +10,12 @@
     var notificationGeneratingPdfDoneSuccessID = "generate_done_success_notification";
     var notificationGeneratingPdfDoneFailledID = "generate_done_failled_notification";
     var notificationGeneratingPdfIntervalId = null;
+    var userAgent = navigator.userAgent.toLowerCase();
+    var isChrome = userAgent.indexOf('chrome') > -1 && userAgent.indexOf('opr/') == -1;
 
     var animateNotification = (notificationGeneratingPdfID, notificationOptions) => {
-        if(typeof browser.notifications.update !== "function")
+
+        if(!isChrome)
         {
             return;
         }
@@ -85,11 +88,15 @@
                 notificationOptions.progress = 100;
                 notificationId = notificationGeneratingPdfDoneSuccessID;
 
-                notificationOptions.buttons = [
-                    {
-                        title:browser.i18n.getMessage("openFileButton")
-                    }
-                ]
+                if(isChrome)
+                {
+                    notificationOptions.buttons = [
+                        {
+                            title:browser.i18n.getMessage("openFileButton")
+                        }
+                    ];
+                }
+
             }
 
             setTimeout(function () { //clear all notification before showing new

@@ -17,7 +17,7 @@
     browser.runtime.onMessage.addListener((message, sender) => {
         if (message && message.type === 'generatePDF')
         {
-            console.log(12345678)
+
             if(isRequesting)
             {
                 return;
