@@ -1,0 +1,73 @@
+{
+  "extensionName": {
+    "message": "Convert To PDF",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Sauvegarder vos page web en format PDF",
+    "description": "Description of the extension."
+  },
+
+  "convertToPdfCommand": {
+    "message": "Raccourcis de conversion",
+    "description": "Open addon popup shortcut command"
+  },
+
+  "pageActionPopupTitle": {
+    "message": "Option de conversation",
+    "description": "Page Action popup title"
+  },
+
+  "notificationProgressTitle": {
+    "message": "Generation en cours",
+    "description": "Notification progress  title"
+  },
+
+  "notificationProgressMessage": {
+    "message": "Patienter svp",
+    "description": "Notification progress  message"
+  },
+
+  "notificationGenerateFailledTitle": {
+    "message": "Erreur",
+    "description": "Notification Failled  title"
+  },
+
+  "notificationGenerateFailledMessage": {
+    "message": "Erreur lors de la generation du pdf",
+    "description": "Notification Failled  message"
+  },
+
+  "notificationGenerateFailledContextMessage": {
+    "message": "Re-essayer plus tard",
+    "description": "Notification failled conext message"
+  },
+  "notificationGenerateSuccessTitle": {
+    "message": "Succes",
+    "description": "Notification Failled  title"
+  },
+
+  "notificationGenerateSuccessMessage": {
+    "message": "Votre pdf a ete generer avec succes",
+    "description": "Notification success  message"
+  },
+
+  "notificationGenerateSuccessContextMessage": {
+    "message": "Cliquer sur le text pour nous envoyer un feedback",
+    "description": "Notification success  context message"
+  },
+
+  "retryButton": {
+    "message": "Re-essayer",
+    "description": "Notification progress  title"
+  },
+  "openFileButton": {
+    "message": "Ouvrir le fichier",
+    "description": "Notification progress  title"
+  },
+  "convertButton": {
+    "message": "Convertire le Fichier",
+    "description": "Convert button"
+  }
+}

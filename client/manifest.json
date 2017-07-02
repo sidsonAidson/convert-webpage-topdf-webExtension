@@ -1,0 +1,64 @@
+{
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "lib/js/jquery-3.2.1.min.js",
+        "lib/js/download.js",
+        "async-await.js",
+        "misc.js",
+        "controller.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "32": "ico/addon-ico-32.png"
+    },
+    "default_title":"__MSG_pageActionPopupTitle__",
+    "default_popup": "html/option.html"
+  },
+  "commands": {
+    "convert-to-pdf": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P"
+      },
+      "description": "__MSG_convertToPdfCommand__"
+    }
+  },
+  "options_ui": {
+    "page": "html/option.html"
+  },
+  "content_security_policy": "script-src 'self' https://*.cloudflare.com; object-src 'self'",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "32": "ico/addon-ico-32.png"
+  },
+  "web_accessible_resources": [
+    "ico/addon-ico-32.png",
+    "ico/success.png",
+    "ico/error.png",
+    "ico/loading.png"
+  ],
+  "permissions": [
+    "*://*/*",
+    "webRequest",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "downloads",
+    "downloads.open"
+  ],
+  "default_locale":"en",
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "1.0.0"
+}
