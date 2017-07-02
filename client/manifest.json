@@ -34,9 +34,6 @@
       "description": "__MSG_convertToPdfCommand__"
     }
   },
-  "options_ui": {
-    "page": "html/option.html"
-  },
   "content_security_policy": "script-src 'self' https://*.cloudflare.com; object-src 'self'",
   "description": "__MSG_extensionDescription__",
   "icons": {
@@ -48,6 +45,12 @@
     "ico/error.png",
     "ico/loading.png"
   ],
+  "homepage_url": "http://sidsonaidson.github.io/",
+  "author": "Moussa Ndour",
+  "developer": {
+    "name": "Moussa Ndour",
+    "url": "http://sidsonaidson.github.io/"
+  },
   "permissions": [
     "*://*/*",
     "webRequest",
