@@ -21,10 +21,32 @@ app.use(bodyParser.urlencoded({limit: '5mb', extended: false }));
 
 app.get('/', (req, res) => {
     const fs = require('fs');
-    fs.readFile(__dirname + '/view/cv.html', function (error, file){
+    fs.readFile(__dirname + '/view/index.html', function (error, file){
         res.send(file.toString());
     });
 });
+
+app.get('/me', (req, res) => {
+    const fs = require('fs');
+    fs.readFile(__dirname + '/view/me.html', function (error, file){
+        res.send(file.toString());
+    });
+});
+
+app.get('/doc', (req, res) => {
+    const fs = require('fs');
+    fs.readFile(__dirname + '/view/doc.html', function (error, file){
+        res.send(file.toString());
+    });
+});
+
+app.get('/support', (req, res) => {
+    const fs = require('fs');
+    fs.readFile(__dirname + '/view/support.html', function (error, file){
+        res.send(file.toString());
+    });
+});
+
 
 app.post('/to-pdf', (req, res) => {
 

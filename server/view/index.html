@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert to PDF Webservice</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/ico-64.png" type="image/png" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <style>
+        body{
+            padding-top: 80px;
+            background-image: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ignasi_pattern_s.png');
+        }
+
+        html, body,  #wrapper, .container{
+            height: 100%;
+        }
+
+        html, body{
+            overflow: hidden;
+        }
+
+        .jumbotron{
+            background-color: rgb(81, 87, 99); color: rgb(255, 255, 255);
+            margin-top: 150px;
+            padding-bottom: 5px;
+            opacity: 0.6;
+        }
+
+        .link{
+            color: #5EB9D1;;
+            cursor: pointer;
+        }
+
+        .navbar-brand img{
+
+        }
+
+        .navbar-inverse{
+            background-color: rgb(81, 87, 99);
+            height: 80px;
+            border-color: rgb(81, 87, 99);
+            opacity: 0.7;
+        }
+
+        #floating{
+
+        }
+        
+
+        .floating-button{
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #e85858;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px #666;
+        }
+
+        .up{
+            bottom: 95px;
+            background: #fec057;
+        }
+
+        
+    </style>
+
+
+</head>
+<body >
+<div id="container-floating">
+
+
+    <div class="floating-button up" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">
+       <a href="/doc"><img style="width: 100%;" src="https://housing.umn.edu/sites/housing.umn.edu/files/help.png"></a>
+    </div>
+
+    <div class="floating-button " data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">
+        <a href="/me"><img style="width: 100%;" src="http://www.betera.es/fileadmin/Archivos/Areas_tematicas/Mujer/LOGOS/logos_material_design/skype2512x512.png"></a>
+    </div>
+
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=""><img src="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/ico-64.png"> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="wrapper">
+        <div class="jumbotron" >
+            <h1 class="text-warning text-center">Welcome!</h1>
+            <p class="text-center"><span class="link" onclick="">Convert to PDF Webservice</span> </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
