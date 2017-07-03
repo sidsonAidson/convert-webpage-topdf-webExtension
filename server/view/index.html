@@ -161,15 +161,22 @@ top: -6px;
 
             <pre>Response Use:
                 <code>
+
+                    .....................
+
+                    var http =  new XMLHttpRequest();
+                    http.responseType = 'blob';
                     http.onreadystatechange = function() {
                         if(http.readyState == 4)
                         {
                             if(http.status == 200)
                             {
-                                var blob = new Blob([http.responseText], "application/pdf");
+                                var blob = new Blob([http.response], "application/pdf");
                             }
                         }
-                };
+                    };
+
+                    ...........................
                 </code>
 
             </pre>

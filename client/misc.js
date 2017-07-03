@@ -74,7 +74,7 @@ function fetcher(url, method, data, responseType)
                         json : function(){
                             try
                             {
-                                return Promise.resolve(JSON.parse(responseText));
+                                return Promise.resolve(JSON.parse(response));
                             } catch (e)
                             {
                                 return Promise.reject(e);
