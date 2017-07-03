@@ -45,11 +45,11 @@
     "ico/error.png",
     "ico/loading.png"
   ],
-  "homepage_url": "http://sidsonaidson.github.io/",
+  "homepage_url": "https://sidson-aidson-pdf-server.herokuapp.com/",
   "author": "Moussa Ndour",
   "developer": {
     "name": "Moussa Ndour",
-    "url": "http://sidsonaidson.github.io/"
+    "url": "https://sidson-aidson-pdf-server.herokuapp.com/"
   },
   "permissions": [
     "*://*/*",

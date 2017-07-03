@@ -33,16 +33,11 @@ app.get('/me', (req, res) => {
     });
 });
 
-app.get('/doc', (req, res) => {
-    const fs = require('fs');
-    fs.readFile(__dirname + '/view/doc.html', function (error, file){
-        res.send(file.toString());
-    });
-});
 
-app.get('/support', (req, res) => {
+
+app.get('/licence', (req, res) => {
     const fs = require('fs');
-    fs.readFile(__dirname + '/view/support.html', function (error, file){
+    fs.readFile(__dirname + '/view/licence.html', function (error, file){
         res.send(file.toString());
     });
 });

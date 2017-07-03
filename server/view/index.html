@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Convert to PDF Webservice</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/ico-64.png" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/addon-ico-64.png" type="image/png" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -20,7 +20,7 @@
         }
 
         html, body{
-            overflow: hidden;
+            overflow: auto;
         }
 
         .jumbotron{
@@ -28,6 +28,12 @@
             margin-top: 150px;
             padding-bottom: 5px;
             opacity: 0.6;
+        }
+
+        .inline-image img{
+            width: 80px;
+            margin: 35px;
+
         }
 
         .link{
@@ -68,6 +74,18 @@
             background: #fec057;
         }
 
+        .up2{
+            bottom: 160px;
+            background: #fec057;
+        }
+
+        .up2 img{
+            width: 84px !important;
+            position: relative;
+            left: -13px;
+            top: 0;
+        }
+
         
     </style>
 
@@ -77,12 +95,16 @@
 <div id="container-floating">
 
 
-    <div class="floating-button up" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">
-       <a href="/doc"><img style="width: 100%;" src="https://housing.umn.edu/sites/housing.umn.edu/files/help.png"></a>
-    </div>
+    <!--<div class="floating-button up2" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">-->
+        <!--<a href="/doc"><img style="width: 100%;" src="http://www.verdeazzurronotizie.it/wp-content/uploads/2016/09/DOC.png"></a>-->
+    <!--</div>-->
+
+    <!--<div class="floating-button up" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">-->
+       <!--<a href="/support"><img style="width: 100%;" src="https://housing.umn.edu/sites/housing.umn.edu/files/help.png"></a>-->
+    <!--</div>-->
 
     <div class="floating-button " data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="">
-        <a href="/me"><img style="width: 100%;" src="http://www.betera.es/fileadmin/Archivos/Areas_tematicas/Mujer/LOGOS/logos_material_design/skype2512x512.png"></a>
+        <a target="_blank" href="https://sidsonaidson.github.io"><img style="width: 100%;" src="http://www.betera.es/fileadmin/Archivos/Areas_tematicas/Mujer/LOGOS/logos_material_design/skype2512x512.png"></a>
     </div>
 
 </div>
@@ -98,7 +120,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=""><img src="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/ico-64.png"> </a>
+                <a class="navbar-brand" href=""><img style="width: 60px;
+position: relative;
+top: -6px;
+" src="https://raw.githubusercontent.com/sidsonAidson/convert-webpage-topdf-webExtension/master/client/ico/addon-ico-64.png"> </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -112,6 +137,59 @@
         <div class="jumbotron" >
             <h1 class="text-warning text-center">Welcome!</h1>
             <p class="text-center"><span class="link" onclick="">Convert to PDF Webservice</span> </p>
+        </div>
+        <div class="jumbotron" >
+            <h1>REST API</h1>
+            <pre>REQUEST METHOD : POST</pre>
+            <pre>REQUEST URL : https://sidson-aidson-pdf-server.herokuapp.com/to-pdf</pre>
+            <pre>REQUEST PARAMS:
+                <code>
+                    var option = {
+                        name:"output_name.pdf",
+                        format:"A4",// A3, A4, A5, Letter, Legal, Tabloid
+                        orientation:"portrait", // portrait, landscape
+                        marginTop:0, // Min: 0
+                        marginRight:0, // Min: 0
+                        marginBottom:0, // Min: 0
+                        marginLeft:0, // Min: 0
+                        zoom:  1 // Min: 0, Max 100
+                };
+                </code>
+
+            </pre>
+            <pre>RESPONSE CONTENT-TYPE: "application/pdf"</pre>
+
+            <pre>Response Use:
+                <code>
+                    http.onreadystatechange = function() {
+                        if(http.readyState == 4)
+                        {
+                            if(http.status == 200)
+                            {
+                                var blob = new Blob([http.responseText], "application/pdf");
+                            }
+                        }
+                };
+                </code>
+
+            </pre>
+        </div>
+        <div class="jumbotron" >
+            <h1>Convert to Pdf Browser add-on</h1>
+            <div>
+                <a class="inline-image" target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/convert-webpage-to-pdf/"><img src="https://addons.cdn.mozilla.net/static/img/icons/firefox.png?b=847f4d65-595588bf"></a>
+                <a  class="inline-image" target="_blank" href="https://addons.opera.com/en/extensions/details/convert-webpage-to-pdf/?display=en-US"><img src="https://addons-static.operacdn.com/static/header-footer/css/img/opera-icon-header@2x.417c6a4c023a.png"></a>
+
+            </div>
+
+        </div>
+        <div class="jumbotron" >
+            <h1>Source Code</h1>
+            <div>
+                <a class="inline-image" target="_blank" href="https://github.com/sidsonAidson/convert-webpage-topdf-webExtension"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png"></a>
+
+            </div>
+
         </div>
     </div>
 </div>
