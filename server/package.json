@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "is-stream": "^1.1.0",
+    "slang": "^0.3.0"
   },
   "devDependencies": {},
   "author": "sidson aidson",
