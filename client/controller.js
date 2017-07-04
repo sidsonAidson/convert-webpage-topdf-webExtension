@@ -25,7 +25,6 @@
 
             isRequesting = true;
             var option = message.option;
-            //option.source =  $('html').html();
             option.source =  window.location.href;
 
             option.baseUrl = location.protocol+'//'+location.hostname + (location.port ? ':' + location.port: '');

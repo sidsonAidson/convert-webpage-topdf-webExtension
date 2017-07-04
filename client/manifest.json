@@ -10,8 +10,8 @@
         "*://*/*"
       ],
       "js": [
-        "lib/js/jquery-3.2.1.min.js",
-        "lib/js/download.js",
+        "lib/js/jquery.min.js",
+        "lib/js/download.min.js",
         "async-await.js",
         "misc.js",
         "controller.js"
@@ -21,7 +21,8 @@
   ],
   "page_action": {
     "default_icon": {
-      "32": "ico/addon-ico-32.png"
+      "32": "ico/addon-ico-32.png",
+      "64": "ico/addon-ico-64.png"
     },
     "default_title":"__MSG_pageActionPopupTitle__",
     "default_popup": "html/option.html"
@@ -34,16 +35,18 @@
       "description": "__MSG_convertToPdfCommand__"
     }
   },
-  "content_security_policy": "script-src 'self' https://*.cloudflare.com; object-src 'self'",
   "description": "__MSG_extensionDescription__",
   "icons": {
-    "32": "ico/addon-ico-32.png"
+    "32": "ico/addon-ico-32.png",
+    "64": "ico/addon-ico-64.png"
   },
   "web_accessible_resources": [
     "ico/addon-ico-32.png",
+    "ico/addon-ico-64.png",
     "ico/success.png",
     "ico/error.png",
-    "ico/loading.png"
+    "ico/loading.png",
+    "ico/logo.png"
   ],
   "homepage_url": "https://sidson-aidson-pdf-server.herokuapp.com/",
   "author": "Moussa Ndour",
@@ -63,5 +66,5 @@
   "default_locale":"en",
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
-  "version": "1.0.1"
+  "version": "1.0.3"
 }
